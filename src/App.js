@@ -10,11 +10,29 @@ class App extends Component{
     }
   }
 
+//we need to .map through this.state.squares and label their entire value,index, emoji
+// method to create the initial alert handleGamePlay
+  handleGamePlay = (index) => {
+    alert("yo!" )
+  }
+
   render(){
     return(
       <React.Fragment>
-        <h1>Tic Tac Toe</h1>
-        <Square />
+        <h1 id="title">Tic Tac Toe</h1>
+        <div id="boardgame">
+        { this.state.squares.map((value, index) => {
+          return (
+          <Square
+          value={ value }
+          key={ index }
+          index={ index }
+          handleGamePlay= {
+            this.handleGamePlay }
+          />
+        )
+      }) }
+      </div>
       </React.Fragment>
     )
   }
