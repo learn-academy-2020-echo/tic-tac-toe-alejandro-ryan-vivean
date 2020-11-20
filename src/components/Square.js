@@ -8,6 +8,7 @@ class Square extends Component{
 // display the corresponding name for the current user & their emoji
 //
 
+// we want this function to comeback with the specific instance of index within our rules of handleGamePlay
   handleClick = () => {
     this.props.handleGamePlay(this.props.index)
   }
@@ -15,7 +16,9 @@ class Square extends Component{
   render(){
     return(
       <React.Fragment>
-        <div id="square" onClick={ this.handleClick }></div>
+        <div id="square" onClick={ this.handleClick }>
+          {this.props.value}
+        </div>
       </React.Fragment>
     )
   }
