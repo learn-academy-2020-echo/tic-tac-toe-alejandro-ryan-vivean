@@ -9,7 +9,7 @@ class App extends Component{
       squares: [0, 0, 0, 0, 0, 0, 0, 0, 0]
     }
   }
-
+// update state
   render(){
     return(
       <React.Fragment>
